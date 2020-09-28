@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class User_registration {
 	public boolean checkPattern(String value) {
 		   boolean result = false;
-		   String pattern = "^[0-9]{1,3}[ ][0-9]{10}$";
+		   String pattern = "^.{8,}$";
 		  
 		   Pattern r = Pattern.compile(pattern);
 
@@ -24,7 +24,7 @@ public class User_registration {
 		System.out.println("Welcome to User Registration System ");
 		Scanner sc = new Scanner(System.in);
 	    User_registration obj = new User_registration();
-	    System.out.println("Enter mobile number");   
+	    System.out.println("Enter passowrd");   
 	    String value = sc.nextLine();
 	    Boolean ans = obj.checkPattern(value);
 	    if(ans==true)

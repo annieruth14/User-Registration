@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class User_registration {
 	public boolean checkPattern(String value) {
 		   boolean result = false;
-		   String pattern = "^(?=.*[0-9])(?=.*[A-Z]).{8,}";
+		   String pattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[^A-z0-9]).{8,}";
 		  
 		   Pattern r = Pattern.compile(pattern);
 

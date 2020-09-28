@@ -6,13 +6,13 @@ import java.util.regex.Pattern;
 
 
 public class User_registration {
-	public boolean checkPattern(String first_name) {
+	public boolean checkPattern(String value) {
 		   boolean result = false;
-		   String pattern = "^[A-Za-z0-9]+([_+-.]?[A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}(.[A-Za-z]{2})?$";
-		   
+		   String pattern = "^[0-9]{1,3}[ ][0-9]{10}$";
+		  
 		   Pattern r = Pattern.compile(pattern);
 
-		   Matcher m = r.matcher(first_name);
+		   Matcher m = r.matcher(value);
 		   if (m.find())
 			   	result = true;
 		   else 
@@ -24,7 +24,7 @@ public class User_registration {
 		System.out.println("Welcome to User Registration System ");
 		Scanner sc = new Scanner(System.in);
 	    User_registration obj = new User_registration();
-	    System.out.println("Enter valid email id");   
+	    System.out.println("Enter mobile number");   
 	    String value = sc.nextLine();
 	    Boolean ans = obj.checkPattern(value);
 	    if(ans==true)

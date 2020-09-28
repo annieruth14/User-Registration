@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class User_registration {
 	public boolean checkPattern(String first_name) {
 		   boolean result = false;
-		   String pattern = "^[A-Z][a-z]{2,}$";
+		   String pattern = "^[A-Za-z0-9]+([_+-.]?[A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}(.[A-Za-z]{2})?$";
 		   
 		   Pattern r = Pattern.compile(pattern);
 
@@ -24,7 +24,7 @@ public class User_registration {
 		System.out.println("Welcome to User Registration System ");
 		Scanner sc = new Scanner(System.in);
 	    User_registration obj = new User_registration();
-	    System.out.println("Enter last name");   
+	    System.out.println("Enter valid email id");   
 	    String value = sc.nextLine();
 	    Boolean ans = obj.checkPattern(value);
 	    if(ans==true)
